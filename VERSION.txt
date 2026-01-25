@@ -1,0 +1,19 @@
+WTD-Madagascar
+Version : v1.0
+Date de publication : 26 janvier 2026
+
+Statut :
+- Site public d’information et d’orientation
+- Conforme RGAA (niveau élevé)
+- Version hors-ligne disponible
+- Aucun traitement de données personnelles
+- Aucune automatisation décisionnelle
+
+Responsable :
+Patrick Billy
+
+Portée :
+Madagascar (déploiement progressif)
+
+Cette version constitue la référence officielle du projet WTD-Madagascar.
+Toute évolution fera l’objet d’une version ultérieure identifiée.
