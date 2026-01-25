@@ -4,95 +4,113 @@
   <meta charset="UTF-8" />
   <title>Transport accessible – WTD-Madagascar</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <style>
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;margin:0;background:#f6f8fa;color:#222}
-    header{background:#0b4a6f;color:#fff;padding:16px}
-    header h1{margin:0;font-size:22px}
-    nav a{color:#fff;text-decoration:none;margin-right:12px;font-weight:600}
-    main{max-width:960px;margin:auto;padding:16px}
-    .card{background:#fff;border-radius:10px;padding:16px;margin:12px 0;box-shadow:0 2px 8px rgba(0,0,0,.08)}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
-    .badge{display:inline-block;background:#e7f3ff;color:#0b4a6f;padding:6px 10px;border-radius:999px;font-weight:700;font-size:12px}
-    .btn{display:inline-block;background:#0b4a6f;color:#fff;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:700}
-    footer{padding:16px;text-align:center;color:#666}
-  </style>
+  <meta name="description" content="Transports accessibles à Madagascar : taxis, véhicules adaptés, accompagnement humain et solutions terrain via WTD-Madagascar." />
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
+
 <body>
 
-<header>
-  <h1>WTD-Madagascar</h1>
-  <nav>
-    <a href="index.html">Accueil</a>
-    <a href="services.html">Services</a>
-    <a href="transport-accessible.html">Transport</a>
-    <a href="map-services.html">Carte</a>
-    <a href="bot-dashboard.html">Bot</a>
-    <a href="inscription.html">Inscription</a>
-  </nav>
+<!-- Accès rapide clavier -->
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+
+<header class="site-header">
+  <div class="container">
+    <h1>WTD-Madagascar</h1>
+    <p>Transport accessible & inclusion</p>
+
+    <nav class="site-nav" aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="services.html">Services</a>
+      <a href="transport-accessible.html" aria-current="page">Transport</a>
+      <a href="map-services.html">Carte</a>
+      <a href="bot-dashboard.html">Bot</a>
+      <a href="inscription.html">Proposer un service</a>
+      <a href="statut-transparence.html">Statut & transparence</a>
+      <a href="institutions-partenaires.html">Institutions</a>
+    </nav>
+  </div>
 </header>
 
-<main>
-  <div class="card">
-    <span class="badge">Terrain</span>
+<main id="contenu">
+
+  <!-- ====== INTRO ====== -->
+  <section class="card">
+    <span class="badge badge-info">Terrain</span>
     <h2>Transport accessible</h2>
     <p>
-      Cette page recense et structure les solutions de transport accessibles
-      pour faciliter les déplacements des personnes en situation de handicap,
+      Cette page recense et structure les <strong>solutions de transport accessibles</strong>
+      afin de faciliter les déplacements des personnes en situation de handicap,
       des personnes âgées et des publics fragiles à Madagascar.
     </p>
-  </div>
-
-  <div class="grid">
-    <div class="card">
-      <h3>Objectifs</h3>
-      <ul>
-        <li>Identifier les solutions existantes (taxis, VTC, minibus, relais)</li>
-        <li>Documenter l’accessibilité réelle (montée, assise, aide humaine)</li>
-        <li>Faciliter la mise en relation locale</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h3>Types de solutions</h3>
-      <ul>
-        <li>Taxis partenaires</li>
-        <li>Véhicules adaptés / semi-adaptés</li>
-        <li>Transport communautaire</li>
-        <li>Accompagnement humain</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h3>Fonctionnement WTD</h3>
-      <ul>
-        <li>Recensement terrain</li>
-        <li>Validation par usage réel</li>
-        <li>Mise à jour progressive</li>
-        <li>Accès hors-ligne (progressif)</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="card">
-    <h3>Accès rapides</h3>
-    <p>
-      <a class="btn" href="map-services.html">🗺️ Voir sur la carte</a>
-      <a class="btn" href="inscription.html">➕ Proposer un service</a>
+    <p class="small">
+      Tsy fitaterana manara-maso ity. Tsy misy angon-drakitra manokana voatahiry.
     </p>
-  </div>
+  </section>
 
-  <div class="card">
-    <h3>À venir</h3>
+  <!-- ====== OBJECTIFS ====== -->
+  <section class="card">
+    <h2>Objectifs</h2>
     <ul>
-      <li>Filtres par ville / quartier</li>
-      <li>Indication du niveau d’accessibilité</li>
-      <li>Contact direct sécurisé</li>
+      <li>Identifier les solutions existantes (taxis, VTC, minibus, relais)</li>
+      <li>Documenter l’accessibilité réelle (montée, assise, aide humaine)</li>
+      <li>Faciliter la mise en relation locale</li>
     </ul>
-  </div>
+  </section>
+
+  <!-- ====== TYPES ====== -->
+  <section class="card">
+    <h2>Types de solutions</h2>
+    <ul>
+      <li>Taxis partenaires</li>
+      <li>Véhicules adaptés ou semi-adaptés</li>
+      <li>Transport communautaire</li>
+      <li>Accompagnement humain</li>
+    </ul>
+  </section>
+
+  <!-- ====== FONCTIONNEMENT ====== -->
+  <section class="card">
+    <h2>Fonctionnement WTD</h2>
+    <ul>
+      <li>Recensement depuis le terrain</li>
+      <li>Validation par usage réel</li>
+      <li>Mise à jour progressive</li>
+      <li>Accès hors-ligne (déploiement progressif)</li>
+    </ul>
+  </section>
+
+  <!-- ====== ACCÈS RAPIDES ====== -->
+  <section class="card">
+    <h2>Accès rapides</h2>
+    <div class="actions">
+      <a class="btn" href="map-services.html">🗺️ Voir sur la carte</a>
+      <a class="btn btn-secondary" href="inscription.html">➕ Proposer un service</a>
+      <a class="btn btn-secondary" href="terrain/">📄 Documents terrain</a>
+    </div>
+  </section>
+
+  <!-- ====== À VENIR ====== -->
+  <section class="card">
+    <h2>Évolutions prévues</h2>
+    <ul>
+      <li>Filtres par ville et quartier</li>
+      <li>Indication progressive du niveau d’accessibilité</li>
+      <li>Contact local sécurisé et contextualisé</li>
+    </ul>
+  </section>
+
 </main>
 
-<footer>
-  © WTD-Madagascar — Transport accessible & inclusion
+<footer class="site-footer">
+  <p>
+    © WTD-Madagascar — Transport accessible & inclusion
+  </p>
+  <p>
+    <small>
+      Information · Orientation · Validation humaine ·
+      <a href="statut-transparence.html">Transparence</a>
+    </small>
+  </p>
 </footer>
 
 </body>
