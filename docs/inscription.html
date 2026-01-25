@@ -2,152 +2,131 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <title>Inscription – WTD Madagascar</title>
+  <title>Inscription – Proposer un service | WTD-Madagascar</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f4f6f8;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background: #0b4a6f;
-      color: white;
-      padding: 16px;
-      font-size: 20px;
-      font-weight: bold;
-    }
-    main {
-      max-width: 800px;
-      margin: 30px auto;
-      background: white;
-      padding: 30px;
-      border-radius: 8px;
-    }
-    h1 {
-      margin-top: 0;
-    }
-    label {
-      display: block;
-      margin-top: 15px;
-      font-weight: bold;
-    }
-    input, textarea, select {
-      width: 100%;
-      padding: 10px;
-      margin-top: 6px;
-      border-radius: 4px;
-      border: 1px solid #ccc;
-    }
-    button {
-      margin-top: 25px;
-      padding: 12px 20px;
-      background: #0b4a6f;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-    .box {
-      background: #eef4f8;
-      padding: 15px;
-      border-radius: 6px;
-      margin-bottom: 20px;
-    }
-    .mg {
-      color: #333;
-      font-style: italic;
-      margin-top: 6px;
-    }
-    a {
-      color: #0b4a6f;
-      text-decoration: none;
-    }
-  </style>
+  <meta name="description" content="Formulaire WTD-Madagascar pour proposer un service accessible ou devenir relais terrain (transport, accompagnement, aide humaine)." />
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
 <body>
 
-<header>
-  WTD-Madagascar – Inscription
+<!-- Accès rapide clavier -->
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+
+<header class="site-header">
+  <div class="container">
+    <h1>WTD-Madagascar</h1>
+    <p>Information · Orientation · Terrain</p>
+
+    <nav class="site-nav" aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="services.html">Services</a>
+      <a href="transport-accessible.html">Transport</a>
+      <a href="map-services.html">Carte</a>
+      <a href="bot-dashboard.html">Bot</a>
+      <a href="inscription.html" aria-current="page">Proposer un service</a>
+      <a href="statut-transparence.html">Statut & transparence</a>
+      <a href="institutions-partenaires.html">Institutions</a>
+    </nav>
+  </div>
 </header>
 
-<main>
+<main id="contenu">
 
-  <h1>Proposer un service / Devenir relais WTD</h1>
-
-  <div class="box">
+  <!-- ====== INTRO ====== -->
+  <section class="card">
+    <h2>Proposer un service / Devenir relais WTD</h2>
     <p>
-      Ce formulaire permet de proposer un service accessible (transport,
-      accompagnement, relais local, aide humaine) dans le cadre du programme
-      <strong>WTD-Madagascar</strong>.
+      Ce formulaire permet de proposer un <strong>service accessible</strong>
+      (transport, accompagnement, relais local, aide humaine)
+      dans le cadre du programme <strong>WTD-Madagascar</strong>.
     </p>
-    <p class="mg">
-      Ity taratasy ity dia natao hanolorana tolotra na fanampiana (fitaterana,
-      fanohanana, relais eny an-tanàna) ao anatin’ny programa WTD-Madagascar.
+    <p class="small">
+      Ity taratasy ity dia natao hanolorana tolotra na fanampiana
+      (fitaterana, fanohanana, relais eny an-tanàna)
+      ao anatin’ny programa WTD-Madagascar.
     </p>
-  </div>
+  </section>
 
-  <div class="box">
-    <strong>Engagement éthique WTD</strong>
+  <!-- ====== ÉTHIQUE ====== -->
+  <section class="card">
+    <h2>Engagement éthique WTD</h2>
     <ul>
-      <li>Aucune collecte de données sensibles</li>
-      <li>Aucune décision automatique</li>
-      <li>Validation humaine et terrain</li>
+      <li>✔ Aucune collecte de données sensibles</li>
+      <li>✔ Aucune décision automatique</li>
+      <li>✔ Validation humaine et terrain</li>
     </ul>
-    <p class="mg">
-      Tsy misy fanangonana angon-drakitra saro-pady. Tsy misy fanapahan-kevitra
-      mandeha ho azy. Olombelona sy terrain no manamarina.
+    <p class="small">
+      Tsy misy fanangonana angon-drakitra saro-pady.
+      Tsy misy fanapahan-kevitra mandeha ho azy.
+      Olombelona sy terrain no manamarina.
     </p>
-  </div>
+  </section>
 
-  <form>
-    <label>Nom / Nom de la structure</label>
-    <input type="text" placeholder="Ex : Taxi Solidaire / Association..." />
+  <!-- ====== FORMULAIRE ====== -->
+  <section class="card">
+    <h2>Formulaire de proposition</h2>
 
-    <label>Anarana / Anaran'ny fikambanana</label>
-    <input type="text" />
+    <form action="#" method="post">
 
-    <label>Zone géographique</label>
-    <input type="text" placeholder="Ville, région, fokontany..." />
+      <label for="nom">Nom / Nom de la structure</label>
+      <input id="nom" name="nom" type="text" placeholder="Ex : Taxi solidaire, association…" required />
 
-    <label>Faritra / Toerana</label>
-    <input type="text" />
+      <label for="nom_mg">Anarana / Anaran'ny fikambanana</label>
+      <input id="nom_mg" name="nom_mg" type="text" />
 
-    <label>Type de service</label>
-    <select>
-      <option>Transport accessible</option>
-      <option>Accompagnement humain</option>
-      <option>Relais associatif</option>
-      <option>Autre</option>
-    </select>
+      <label for="zone">Zone géographique</label>
+      <input id="zone" name="zone" type="text" placeholder="Ville, région, fokontany…" required />
 
-    <label>Contact (téléphone ou email)</label>
-    <input type="text" />
+      <label for="zone_mg">Faritra / Toerana</label>
+      <input id="zone_mg" name="zone_mg" type="text" />
 
-    <label>Message / Fanazavana fanampiny</label>
-    <textarea rows="4"></textarea>
+      <label for="type">Type de service</label>
+      <select id="type" name="type" required>
+        <option value="">— Choisir —</option>
+        <option>Transport accessible</option>
+        <option>Accompagnement humain</option>
+        <option>Relais associatif</option>
+        <option>Autre</option>
+      </select>
 
-    <button type="submit">
-      Envoyer la proposition
-    </button>
-  </form>
+      <label for="contact">Contact (téléphone ou email)</label>
+      <input id="contact" name="contact" type="text" required />
 
-  <p style="margin-top:30px;">
-    <strong>Important :</strong> un humain WTD vous recontactera après lecture.
-    <br />
-    <span class="mg">
+      <label for="message">Message / Fanazavana fanampiny</label>
+      <textarea id="message" name="message" rows="4"></textarea>
+
+      <button type="submit" class="btn">
+        Envoyer la proposition
+      </button>
+
+    </form>
+
+    <p class="small">
+      <strong>Important :</strong> un humain WTD vous recontactera après lecture.<br>
       Zava-dehibe : olona avy amin’ny WTD no hifandray aminao aorian’ny famakiana.
-    </span>
-  </p>
+    </p>
 
-  <p>
-    <a href="index.html">← Retour accueil</a>
-  </p>
+  </section>
+
+  <!-- ====== RETOUR ====== -->
+  <section class="card">
+    <a href="index.html">← Retour à l’accueil</a>
+  </section>
 
 </main>
+
+<footer class="site-footer">
+  <p>
+    © WTD-Madagascar — Projet citoyen, humain et non automatisé
+  </p>
+  <p>
+    <small>
+      Aucune donnée personnelle collectée · Orientation uniquement ·
+      <a href="statut-transparence.html">Transparence</a>
+    </small>
+  </p>
+</footer>
 
 </body>
 </html>
