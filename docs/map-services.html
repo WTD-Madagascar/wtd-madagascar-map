@@ -4,6 +4,10 @@
   <meta charset="UTF-8" />
   <title>Carte des services – WTD-Madagascar</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Carte terrain WTD-Madagascar : services accessibles, transports, relais locaux et partenaires." />
+
+  <!-- CSS RGAA -->
+  <link rel="stylesheet" href="assets/css/style.css" />
 
   <!-- Leaflet -->
   <link
@@ -16,79 +20,117 @@
     src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
     crossorigin=""
+    defer
   ></script>
-
-  <style>
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;margin:0;background:#f6f8fa;color:#222}
-    header{background:#0b4a6f;color:#fff;padding:16px}
-    header h1{margin:0;font-size:22px}
-    nav a{color:#fff;text-decoration:none;margin-right:12px;font-weight:600}
-    main{max-width:1100px;margin:auto;padding:16px}
-    .card{background:#fff;border-radius:10px;padding:16px;margin:12px 0;box-shadow:0 2px 8px rgba(0,0,0,.08)}
-    #map{height:480px;border-radius:10px}
-    footer{padding:16px;text-align:center;color:#666}
-    .badge{display:inline-block;background:#e7f3ff;color:#0b4a6f;padding:6px 10px;border-radius:999px;font-weight:700;font-size:12px}
-  </style>
 </head>
+
 <body>
 
-<header>
-  <h1>WTD-Madagascar</h1>
-  <nav>
-    <a href="index.html">Accueil</a>
-    <a href="services.html">Services</a>
-    <a href="transport-accessible.html">Transport</a>
-    <a href="map-services.html">Carte</a>
-    <a href="bot-dashboard.html">Bot</a>
-    <a href="inscription.html">Inscription</a>
-  </nav>
+<!-- Accès rapide clavier -->
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+
+<header class="site-header">
+  <div class="container">
+    <h1>WTD-Madagascar</h1>
+    <p>Cartographie terrain & inclusion</p>
+
+    <nav class="site-nav" aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="services.html">Services</a>
+      <a href="transport-accessible.html">Transport</a>
+      <a href="map-services.html" aria-current="page">Carte</a>
+      <a href="bot-dashboard.html">Bot</a>
+      <a href="inscription.html">Proposer un service</a>
+      <a href="statut-transparence.html">Statut & transparence</a>
+      <a href="institutions-partenaires.html">Institutions</a>
+    </nav>
+  </div>
 </header>
 
-<main>
+<main id="contenu">
 
-  <div class="card">
-    <span class="badge">Carte terrain</span>
+  <!-- ====== PRÉSENTATION ====== -->
+  <section class="card">
+    <span class="badge badge-info">Carte terrain</span>
     <h2>Carte des services & transports accessibles</h2>
     <p>
-      Cette carte recense progressivement les services utiles :
-      transports accessibles, points relais, accompagnement,
+      Cette carte recense progressivement les <strong>services utiles</strong> :
+      transports accessibles, points relais, accompagnement humain,
       services sociaux et partenaires terrain.
     </p>
-  </div>
+    <p class="small">
+      Tsy fanaraha-maso ity sarintany ity. Tsy misy angon-drakitra manokana
+      voatahiry na arahina.
+    </p>
+  </section>
 
-  <div class="card">
-    <div id="map"></div>
-  </div>
+  <!-- ====== CARTE ====== -->
+  <section class="card">
+    <h2>Carte interactive</h2>
+    <div
+      id="map"
+      role="region"
+      aria-label="Carte interactive des services WTD-Madagascar"
+      style="height:480px;border-radius:12px;"
+    ></div>
 
-  <div class="card">
-    <h3>À venir</h3>
+    <p class="small">
+      Astuce accessibilité : utilisez le zoom (+ / −) et les contrôles clavier
+      de votre navigateur pour naviguer sur la carte.
+    </p>
+  </section>
+
+  <!-- ====== ÉVOLUTIONS ====== -->
+  <section class="card">
+    <h2>Évolutions prévues</h2>
     <ul>
       <li>Filtres par type de service</li>
-      <li>Niveau d’accessibilité</li>
-      <li>Ajout collaboratif (terrain)</li>
-      <li>Mode hors-ligne (progressif)</li>
+      <li>Niveau d’accessibilité (progressif)</li>
+      <li>Ajout collaboratif depuis le terrain</li>
+      <li>Mode hors-ligne (déploiement progressif)</li>
     </ul>
-  </div>
+  </section>
+
+  <!-- ====== LIENS UTILES ====== -->
+  <section class="card">
+    <h2>Liens utiles</h2>
+    <ul>
+      <li><a href="services.html">📋 Voir tous les services</a></li>
+      <li><a href="transport-accessible.html">🚐 Transports accessibles</a></li>
+      <li><a href="inscription.html">➕ Proposer un point ou un service</a></li>
+      <li><a href="terrain/">📄 Documents terrain (PDF)</a></li>
+    </ul>
+  </section>
 
 </main>
 
-<footer>
-  © WTD-Madagascar — Cartographie terrain & inclusion
+<footer class="site-footer">
+  <p>
+    © WTD-Madagascar — Cartographie terrain & inclusion
+  </p>
+  <p>
+    <small>
+      Aucune donnée personnelle collectée · Orientation uniquement ·
+      <a href="statut-transparence.html">Transparence</a>
+    </small>
+  </p>
 </footer>
 
 <script>
-  // Initialisation de la carte (centre Madagascar)
-  const map = L.map('map').setView([-18.8792, 47.5079], 6);
+  document.addEventListener("DOMContentLoaded", function () {
+    // Initialisation de la carte (centre Madagascar)
+    const map = L.map("map").setView([-18.8792, 47.5079], 6);
 
-  // Fond de carte OpenStreetMap
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; OpenStreetMap contributors'
-  }).addTo(map);
+    // Fond de carte OpenStreetMap
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      attribution: "&copy; OpenStreetMap contributors"
+    }).addTo(map);
 
-  // Exemple de point (Antananarivo)
-  L.marker([-18.8792, 47.5079])
-    .addTo(map)
-    .bindPopup('<strong>Antananarivo</strong><br>Zone pilote WTD');
+    // Exemple de point (Antananarivo)
+    L.marker([-18.8792, 47.5079])
+      .addTo(map)
+      .bindPopup("<strong>Antananarivo</strong><br>Zone pilote WTD");
+  });
 </script>
 
 </body>
